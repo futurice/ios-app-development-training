@@ -15,7 +15,23 @@
 		0F7402111BABF7F200D20C53 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402101BABF7F200D20C53 /* Article.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7402131BABFC7500D20C53 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402121BABFC7500D20C53 /* ArticleStore.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7402151BAC1F2500D20C53 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402141BAC1F2500D20C53 /* ArticleDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0FDF828C1BAC758B00F24A07 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDF828B1BAC758B00F24A07 /* Kanna.framework */; };
+		0FDF828F1BAC76A700F24A07 /* Kanna.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 0FDF828B1BAC758B00F24A07 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FDF828E1BAC769E00F24A07 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0FDF828F1BAC76A700F24A07 /* Kanna.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F7401F71BAB4EC300D20C53 /* Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +44,7 @@
 		0F7402101BABF7F200D20C53 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		0F7402121BABFC7500D20C53 /* ArticleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		0F7402141BAC1F2500D20C53 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		0FDF828B1BAC758B00F24A07 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDF828C1BAC758B00F24A07 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +62,7 @@
 		0F7401EE1BAB4EC300D20C53 = {
 			isa = PBXGroup;
 			children = (
+				0FDF828B1BAC758B00F24A07 /* Kanna.framework */,
 				0F7401F91BAB4EC300D20C53 /* Reader */,
 				0F7401F81BAB4EC300D20C53 /* Products */,
 			);
@@ -83,6 +102,7 @@
 				0F7401F31BAB4EC300D20C53 /* Sources */,
 				0F7401F41BAB4EC300D20C53 /* Frameworks */,
 				0F7401F51BAB4EC300D20C53 /* Resources */,
+				0FDF828E1BAC769E00F24A07 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -258,6 +278,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Reader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.Reader;
@@ -269,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Reader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.Reader;

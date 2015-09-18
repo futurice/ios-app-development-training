@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kanna
 
 class ArticleStore {
 
@@ -18,11 +19,28 @@ class ArticleStore {
         let task = NSURLSession.sharedSession().dataTaskWithURL(articlesURL) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
-            } else if let _ = data {
-                print("Got some data :)")
-            }
+            } else if let data = data {
+                guard let xml = Kanna.XML(xml: data, encoding: NSUTF8StringEncoding) else {
+                    print("Couldn't parse XML file")
+                    return
+                }
 
-            success([])
+                var articles: [Article] = []
+
+                for item in xml.xpath("//item") {
+                    if let title = item.xpath("title").text,
+                        description = item.xpath("description").text,
+                        linkString = item.xpath("link").text,
+                        url = NSURL(string: linkString) {
+                            let article = Article(title: title, description: description, url: url)
+                            articles.append(article)
+                    }
+                }
+
+                success(articles)
+            } else {
+                print("Something else went wrong")
+            }
         }
 
         task.resume()
