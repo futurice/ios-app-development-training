@@ -10,16 +10,27 @@ import UIKit
 
 class ArticleListViewController: UITableViewController {
 
-    private let articles: [Article]
+    private let articleStore: ArticleStore
+    private var articles: [Article]
 
     // MARK: Lifecycle
 
     required init?(coder aDecoder: NSCoder) {
-        let fakeArticle1 = Article(title: "First article", description: "This is just a fake article.")
-        let fakeArticle2 = Article(title: "Second article", description: "Here is another one.")
-        self.articles = [fakeArticle1, fakeArticle2]
+        self.articleStore = ArticleStore()
+        self.articles = []
 
         super.init(coder: aDecoder)
+    }
+
+    // MARK: View Lifecycle
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        articleStore.fetchArticles(success: { [weak self] articles in
+            self?.articles = articles
+            self?.tableView.reloadData()
+        })
     }
 
     // MARK: - UITableViewDataSource
