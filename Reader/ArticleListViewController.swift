@@ -28,8 +28,11 @@ class ArticleListViewController: UITableViewController {
         super.viewDidAppear(animated)
 
         articleStore.fetchArticles(success: { [weak self] articles in
-            self?.articles = articles
-            self?.tableView.reloadData()
+            // Ensure that the UI gets updated on the main thread
+            dispatch_async(dispatch_get_main_queue(), {
+                self?.articles = articles
+                self?.tableView.reloadData()
+            })
         })
     }
 
