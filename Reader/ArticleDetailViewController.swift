@@ -18,7 +18,20 @@ class ArticleDetailViewController: UIViewController {
         }
     }
 
+    // MARK: View Lifecycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureView()
+    }
+
     private func configureView() {
         self.title = article?.title
+
+        if let webView = self.webView, articleURL = article?.url {
+            let request = NSURLRequest(URL: articleURL)
+            webView.loadRequest(request)
+        }
     }
 }
