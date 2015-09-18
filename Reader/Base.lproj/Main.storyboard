@@ -41,6 +41,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="XPx-Lp-78j" kind="showDetail" id="yyV-ok-JCD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV0-QK-A4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="1662"/>
+            <point key="canvasLocation" x="1123" y="1700"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MYq-AX-KIq">
@@ -102,7 +105,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTE-2A-iyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-509" y="1278"/>
+            <point key="canvasLocation" x="-509" y="1300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zab-nA-gvb">
@@ -121,7 +124,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hK6-d1-iWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="1662"/>
+            <point key="canvasLocation" x="311" y="1700"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ogn-5M-OPJ"/>
+    </inferredMetricsTieBreakers>
 </document>
