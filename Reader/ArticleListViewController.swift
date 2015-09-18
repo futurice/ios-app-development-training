@@ -47,6 +47,8 @@ class ArticleListViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow {
                 let article = articles[indexPath.row]
                 detailVC.article = article
+                detailVC.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                detailVC.navigationItem.leftItemsSupplementBackButton = true
         }
     }
 
