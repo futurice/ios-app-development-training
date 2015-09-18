@@ -18,11 +18,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ny-jU-PRd" id="DqQ-OF-VST">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vZh-UQ-9KD">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -30,7 +30,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XVg-nN-mFd">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -68,10 +68,25 @@
                     <view key="view" contentMode="scaleToFill" id="89e-FR-YDA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxX-0R-nbj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </webView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TxX-0R-nbj" secondAttribute="trailing" id="0FA-xP-B35"/>
+                            <constraint firstItem="TxX-0R-nbj" firstAttribute="leading" secondItem="89e-FR-YDA" secondAttribute="leading" id="BjK-0z-g8Y"/>
+                            <constraint firstItem="TxX-0R-nbj" firstAttribute="top" secondItem="89e-FR-YDA" secondAttribute="top" id="L6n-4S-MnA"/>
+                            <constraint firstItem="TxX-0R-nbj" firstAttribute="bottom" secondItem="FOt-7w-cmE" secondAttribute="top" id="NyQ-TV-kwx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EyZ-dt-Xfy"/>
+                    <connections>
+                        <outlet property="webView" destination="TxX-0R-nbj" id="idF-39-Xo0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV0-QK-A4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

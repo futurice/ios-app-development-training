@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+
     var article: Article? {
         didSet {
             configureView()
