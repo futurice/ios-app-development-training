@@ -17,6 +17,7 @@
 		0F7402151BAC1F2500D20C53 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402141BAC1F2500D20C53 /* ArticleDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0FDF828C1BAC758B00F24A07 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDF828B1BAC758B00F24A07 /* Kanna.framework */; };
 		0FDF828F1BAC76A700F24A07 /* Kanna.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 0FDF828B1BAC758B00F24A07 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FDF82911BAC7EED00F24A07 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF82901BAC7EED00F24A07 /* ArticleCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		0F7402121BABFC7500D20C53 /* ArticleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		0F7402141BAC1F2500D20C53 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		0FDF828B1BAC758B00F24A07 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		0FDF82901BAC7EED00F24A07 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0F7401FA1BAB4EC300D20C53 /* AppDelegate.swift */,
+				0FDF82901BAC7EED00F24A07 /* ArticleCell.swift */,
 				0F74020E1BABF06600D20C53 /* ArticleListViewController.swift */,
 				0F7402141BAC1F2500D20C53 /* ArticleDetailViewController.swift */,
 				0F7402121BABFC7500D20C53 /* ArticleStore.swift */,
@@ -165,6 +168,7 @@
 			files = (
 				0F7401FB1BAB4EC300D20C53 /* AppDelegate.swift in Sources */,
 				0F74020F1BABF06600D20C53 /* ArticleListViewController.swift in Sources */,
+				0FDF82911BAC7EED00F24A07 /* ArticleCell.swift in Sources */,
 				0F7402131BABFC7500D20C53 /* ArticleStore.swift in Sources */,
 				0F7402111BABF7F200D20C53 /* Article.swift in Sources */,
 				0F7402151BAC1F2500D20C53 /* ArticleDetailViewController.swift in Sources */,

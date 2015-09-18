@@ -2,46 +2,56 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mOC-8h-8Ge">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Feed-->
         <scene sceneID="gEQ-9d-BSZ">
             <objects>
                 <tableViewController id="hsw-wK-SDF" customClass="ArticleListViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OTd-PT-13r">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" id="OTd-PT-13r">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subtitledCell" textLabel="vZh-UQ-9KD" detailTextLabel="XVg-nN-mFd" style="IBUITableViewCellStyleSubtitle" id="8ny-jU-PRd">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="116" id="8ny-jU-PRd" customClass="ArticleCell" customModule="Reader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ny-jU-PRd" id="DqQ-OF-VST">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="115.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vZh-UQ-9KD">
-                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5em-GL-GHN" userLabel="Title Label">
+                                            <rect key="frame" x="23" y="8" width="554" height="20.5"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XVg-nN-mFd">
-                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7t-oZ-bFd" userLabel="Description Label">
+                                            <rect key="frame" x="23" y="38.5" width="554" height="69"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="5em-GL-GHN" firstAttribute="top" secondItem="DqQ-OF-VST" secondAttribute="topMargin" id="2Tk-KL-Lp3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5em-GL-GHN" secondAttribute="trailing" constant="15" id="BYf-m1-AGW"/>
+                                        <constraint firstItem="f7t-oZ-bFd" firstAttribute="top" secondItem="5em-GL-GHN" secondAttribute="bottom" constant="10" id="CVB-sX-gsw"/>
+                                        <constraint firstItem="f7t-oZ-bFd" firstAttribute="leading" secondItem="DqQ-OF-VST" secondAttribute="leadingMargin" constant="15" id="MYv-vX-tgN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="f7t-oZ-bFd" secondAttribute="bottom" id="RX6-K9-xPk"/>
+                                        <constraint firstItem="5em-GL-GHN" firstAttribute="leading" secondItem="DqQ-OF-VST" secondAttribute="leadingMargin" constant="15" id="hYW-UZ-TeV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="f7t-oZ-bFd" secondAttribute="trailing" constant="15" id="r6t-Du-4Iq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="descriptionLabel" destination="f7t-oZ-bFd" id="NpK-pE-yLr"/>
+                                    <outlet property="titleLabel" destination="5em-GL-GHN" id="Sdd-fj-Tnr"/>
                                     <segue destination="XPx-Lp-78j" kind="showDetail" identifier="showArticle" id="yyV-ok-JCD"/>
                                 </connections>
                             </tableViewCell>

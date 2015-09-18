@@ -27,6 +27,9 @@ class ArticleListViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
+
         articleStore.fetchArticles(success: { [weak self] articles in
             // Ensure that the UI gets updated on the main thread
             dispatch_async(dispatch_get_main_queue(), {
@@ -56,14 +59,14 @@ class ArticleListViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Dequeue a cell (this will auto-create one if none found)
-        let cell = tableView.dequeueReusableCellWithIdentifier("subtitledCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("articleCell") as! ArticleCell
 
         // Get the relevant article
         let article = articles[indexPath.row]
 
         // Configure the cell content
-        cell.textLabel?.text = article.title
-        cell.detailTextLabel?.text = article.description
+        cell.titleLabel.text = article.title
+        cell.descriptionLabel.text = article.description
 
         return cell
     }
