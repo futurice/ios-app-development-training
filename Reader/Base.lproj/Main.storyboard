@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Article List View Controller-->
+        <!--Feed-->
         <scene sceneID="gEQ-9d-BSZ">
             <objects>
                 <tableViewController id="hsw-wK-SDF" customClass="ArticleListViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="hsw-wK-SDF" id="JWp-Zc-HIQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="q02-tN-1bp"/>
+                    <navigationItem key="navigationItem" title="Feed" id="q02-tN-1bp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lW-OL-dxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
