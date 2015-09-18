@@ -10,5 +10,13 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
 
-    var article: Article?
+    var article: Article? {
+        didSet {
+            configureView()
+        }
+    }
+
+    private func configureView() {
+        self.title = article?.title
+    }
 }

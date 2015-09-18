@@ -36,6 +36,17 @@ class ArticleListViewController: UITableViewController {
         })
     }
 
+    // Segues
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showArticle",
+            let detailVC = (segue.destinationViewController as? UINavigationController)?.topViewController as? ArticleDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+                let article = articles[indexPath.row]
+                detailVC.article = article
+        }
+    }
+
     // MARK: - UITableViewDataSource
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

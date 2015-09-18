@@ -42,7 +42,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="XPx-Lp-78j" kind="showDetail" id="yyV-ok-JCD"/>
+                                    <segue destination="XPx-Lp-78j" kind="showDetail" identifier="showArticle" id="yyV-ok-JCD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,6 +128,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ogn-5M-OPJ"/>
+        <segue reference="yyV-ok-JCD"/>
     </inferredMetricsTieBreakers>
 </document>
