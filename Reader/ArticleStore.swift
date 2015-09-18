@@ -14,8 +14,16 @@ class ArticleStore {
 
     func fetchArticles(success success: SuccessHandler) {
         // Create some fake articles
-        let fakeArticle1 = Article(title: "First article", description: "This is just a fake article.")
-        let fakeArticle2 = Article(title: "Second article", description: "Here is another one.")
+        let fakeArticle1 = Article(
+            title: "First article",
+            description: "This is just a fake article.",
+            url: NSURL(string: "http://www.apple.com")!
+        )
+        let fakeArticle2 = Article(
+            title: "Second article",
+            description: "Here is another one.",
+            url: NSURL(string: "http://www.google.com")!
+        )
         let fakeArticles = [fakeArticle1, fakeArticle2]
 
         // Call the success handler immediately
