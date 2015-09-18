@@ -13,6 +13,7 @@
 		0F7402051BAB4EC300D20C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7402031BAB4EC300D20C53 /* LaunchScreen.storyboard */; };
 		0F74020F1BABF06600D20C53 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74020E1BABF06600D20C53 /* ArticleListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7402111BABF7F200D20C53 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402101BABF7F200D20C53 /* Article.swift */; settings = {ASSET_TAGS = (); }; };
+		0F7402131BABFC7500D20C53 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7402121BABFC7500D20C53 /* ArticleStore.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0F7402061BAB4EC300D20C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F74020E1BABF06600D20C53 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		0F7402101BABF7F200D20C53 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		0F7402121BABFC7500D20C53 /* ArticleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				0F7401FA1BAB4EC300D20C53 /* AppDelegate.swift */,
 				0F74020E1BABF06600D20C53 /* ArticleListViewController.swift */,
+				0F7402121BABFC7500D20C53 /* ArticleStore.swift */,
 				0F7402101BABF7F200D20C53 /* Article.swift */,
 				0F7401FE1BAB4EC300D20C53 /* Main.storyboard */,
 				0F7402011BAB4EC300D20C53 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				0F7401FB1BAB4EC300D20C53 /* AppDelegate.swift in Sources */,
 				0F74020F1BABF06600D20C53 /* ArticleListViewController.swift in Sources */,
+				0F7402131BABFC7500D20C53 /* ArticleStore.swift in Sources */,
 				0F7402111BABF7F200D20C53 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
