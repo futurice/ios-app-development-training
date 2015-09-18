@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="946"/>
         </scene>
-        <!--View Controller-->
+        <!--Article Detail View Controller-->
         <scene sceneID="e7o-oH-hax">
             <objects>
-                <viewController id="vNG-uN-hMk" sceneMemberID="viewController">
+                <viewController id="vNG-uN-hMk" customClass="ArticleDetailViewController" customModule="Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ysh-li-eNT"/>
                         <viewControllerLayoutGuide type="bottom" id="FOt-7w-cmE"/>
